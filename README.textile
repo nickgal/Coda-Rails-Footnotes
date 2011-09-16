@@ -10,13 +10,24 @@ h2. Requirements
 
 h2. Setup
 
+h3. Install Dependencies
+
 Install *Homebrew*
 @/usr/bin/ruby -e "$(curl -fsSL https://raw.github.com/gist/323731)"@
 
 Install *Coda Cli*
 @brew install coda-cli@
 
-Edit @Info.plist@
+
+h3. Prepare Script
+
+Open @coda-uri.applescript@ with the AppleScript Editor
+Click File >> Save As >> File Format @Application@
+
+Find the newly saves application in Finder.
+Control click on the application and select @Show Package Content@
+
+Edit @Contents/Info.plist@
 
 bc. <key>CFBundleIdentifier</key>
 <string>com.apple.AppleScript.CodaURI</string>
