@@ -23,8 +23,7 @@ h3. Prepare Script
 
 Open @coda-uri.applescript@ with the AppleScript Editor
 Click File >> Save As >> File Format @Application@
-
-Find the newly saves application in Finder.
+Navigate to the newly saved application in Finder.
 Control click on the application and select @Show Package Content@
 
 Edit @Contents/Info.plist@
@@ -43,3 +42,10 @@ bc. <key>CFBundleURLTypes</key>
       </array>
   </dict>
 </array>
+
+h3. Setup Rails
+
+Add @rails-footnotes, :group => :development@ to your GEMFILE if you havn't already
+
+Open @config/initializers/footnotes.rb@
+Add @Footnotes::Filter.prefix = 'coda-uri://open?url=%s'@ after @Footnotes.run!@
