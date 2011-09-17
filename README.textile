@@ -45,7 +45,7 @@ bc. <key>CFBundleURLTypes</key>
 
 h3. Setup Rails
 
-Add @rails-footnotes, :group => :development@ to your GEMFILE if you havn't already
+Add @gem 'rails-footnotes', :group => :development@ to your GEMFILE if you havn't already
 
 Open @config/initializers/footnotes.rb@
 Add @Footnotes::Filter.prefix = 'coda-uri://open?url=%s'@ after @Footnotes.run!@
